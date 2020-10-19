@@ -67,12 +67,12 @@ app.get('/api/dashboard', jwtMW, (req, res) => {
     });
 });
 
-// app.get('/api/settings', jwtMW, (req, res) => {
-//     res.json({
-//         success: true,
-//         myContent: 'This is the settings'
-//     });
-// });
+app.get('/api/settings', jwtMW, (req, res) => {
+    res.json({
+        success: true,
+        myContent: 'This is the settings'
+    });
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
